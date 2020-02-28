@@ -1,0 +1,57 @@
+@font-face {
+    font-family: "VCR"; /*a name to be used later*/
+    src: url("../fonts/VCR_OSD_MONO_1.001.ttf"); /*URL to font*/
+}
+
+body {
+    margin: 2%;
+    padding: 0;
+    background: #eeeeee;
+    font-family: "Arial";
+    font-size: 18px;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+span {
+    padding: 2%;
+    float: left;
+    width: 25%;
+    height: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+img {
+    height: 200px;
+    width: 200px;
+}
+
+#vendor {
+    font-family: "Arial";
+    font-size: 14px;
+}
+
+/* Global */
+.container {
+    width: 70%;
+    margin: auto;
+}
+
+/* Header */
+header {
+    background: #ffffff;
+    color: #000000;
+    padding-top: 20px;
+    min-height: 70px;
+    border-bottom: #b19cd9 5px solid;
+}
+
+/* Footer */
+footer {
+    background: #c4f1ff;
+    padding-top: 20px;
+    min-height: 40px;
+    border-top: #b19cd9 5px solid;
+}
