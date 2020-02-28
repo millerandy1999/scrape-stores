@@ -4,8 +4,9 @@
 }
 
 body {
-    margin: 2%;
+    position: relative;
     padding: 0;
+    padding-bottom: 120px; /* make room for the footer */
     background: #eeeeee;
     font-family: "Arial";
     font-size: 18px;
@@ -35,7 +36,7 @@ img {
 
 /* Global */
 .container {
-    width: 70%;
+    width: 90%;
     margin: auto;
 }
 
@@ -48,9 +49,21 @@ header {
     border-bottom: #b19cd9 5px solid;
 }
 
+header #logo h1{
+    font-family: "VCR";
+    color: #b19cd9;
+    margin: 0;
+}
+
 /* Footer */
 footer {
+    position:absolute;
+    left:0px;
+    bottom:0px;
+    width:100%;
     background: #c4f1ff;
+    text-align: center;
+    font-size: 14px;
     padding-top: 20px;
     min-height: 40px;
     border-top: #b19cd9 5px solid;

@@ -4,6 +4,7 @@ from bs4 import BeautifulSoup
 import requests
 import re
 import json
+import csv
 
 from initialize import searchTerm
 
@@ -22,7 +23,7 @@ soup = BeautifulSoup(r.content, 'lxml')
 page = soup.find(attrs={'id': re.compile('__next')}).find('div', class_='Flex-ych44r-0 Space-cutht5-0 Container-sc-9aa7mx-0 Grid2__CellWrapper-mpt2p4-1 fAwKGe')
 
 # Output file for beautifulsoup results
-outputFile = "output1.html"
+outputFile = "data.csv"
 
 # Get each item listing on the page
 for item in page.find_all('div', class_='Flex__Box-ych44r-1 Grid2__Col-mpt2p4-0 jyGLaB'):
@@ -46,17 +47,9 @@ for item in page.find_all('div', class_='Flex__Box-ych44r-1 Grid2__Col-mpt2p4-0 
     # Get the item description
     desc = item.find('div', class_='withMetaInfo__EllipsisText-sc-1j2k5ln-12 withMetaInfo__ProductNameText-sc-1j2k5ln-13 itCrEk').text
     
+    vendor = "Mercari"
+    
     # Add the elements to the output file
-    with open(outputFile, "a") as file:
-        file.write("    <span>\n        ")
-        # Image
-        file.write("<img src=\"" + imageURL + "\"/>\n        ")
-        # Title
-        file.write("<div>" + name + "</div>")
-        # Description
-        file.write("<a href=\"" + itemURL + "\">" + desc + "</a>")
-        # Price
-        file.write("<div>" + price + "</div>")
-        
-        file.write("<div id='vendor'>" + "Source: Mercari" + "</div>")
-        file.write("\n    </span>\n")
+    with open(outputFile, 'a') as file:
+        writer = csv.writer(file)
+        writer.writerow([name, desc, imageURL, itemURL, price, vendor])
