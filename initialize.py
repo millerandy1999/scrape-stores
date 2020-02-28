@@ -3,7 +3,7 @@ print("Search: ", end='')
 searchTerm = input()
 
 # Output files
-outputFile = "output1.html"
+outputFile = "outputSite.html"
 outputFileCSV = "data.csv"
 # Clear the previous output entries
 open(outputFile, 'w').close()

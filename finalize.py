@@ -1,5 +1,6 @@
-# Output file
-outputFile = "output1.html"
+# Adds more html elements at the bottom of the page
+
+from initialize import outputFile
 
 footer = """<footer>Created by Andy Miller. For personal use only.</footer>"""
 # Add the footer

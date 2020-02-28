@@ -3,12 +3,12 @@
 
 import csv
 
-outputFile = "output1.html"
-inputFile = "data.csv"
+from initialize import outputFile
+from initialize import outputFileCSV
 
 f = open(outputFile, 'a')
 
-with open(inputFile, 'r') as file:
+with open(outputFileCSV, 'r') as file:
     reader = csv.reader(file, delimiter=',')
     for row in reader:
         f.write("    <span>\n        ")
