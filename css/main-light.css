@@ -9,7 +9,7 @@ body {
     padding-bottom: 120px; /* make room for the footer */
     background: #eeeeee;
     font-family: "Arial";
-    font-size: 18px;
+    font-size: 16px;
     -webkit-font-smoothing: antialiased;
     display: inline-block;
     white-space: nowrap;
@@ -18,8 +18,8 @@ body {
 span {
     padding: 2%;
     float: left;
-    width: 25%;
-    height: 300px;
+    width: 20%;
+    height: 250px;
     overflow: hidden;
     text-overflow: ellipsis;
 }
@@ -31,7 +31,7 @@ img {
 
 #vendor {
     font-family: "Arial";
-    font-size: 14px;
+    font-size: 12px;
 }
 
 /* Global */

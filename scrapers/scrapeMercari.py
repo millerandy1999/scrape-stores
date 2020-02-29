@@ -34,7 +34,7 @@ for item in page.find_all('div', class_='Flex__Box-ych44r-1 Grid2__Col-mpt2p4-0 
     # get the elements from the script
     imageURL = str(scriptText['image'])
     itemURL = urlMain + str(scriptText['offers']['url'])
-    price = "$" + str(scriptText['offers']['price'])
+    price = scriptText['offers']['price']
     
     # Get the item name
     try:
